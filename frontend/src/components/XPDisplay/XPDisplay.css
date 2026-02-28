@@ -1,0 +1,64 @@
+.xp-display {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  min-width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.xp-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.xp-icon {
+  color: var(--accent);
+}
+
+.xp-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.xp-level {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.xp-points {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.xp-progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xs);
+}
+
+.xp-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.xp-next {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .xp-display {
+    width: 100%;
+    min-width: auto;
+  }
+}

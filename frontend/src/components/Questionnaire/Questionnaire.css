@@ -1,0 +1,164 @@
+.questionnaire-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--secondary-light) 100%);
+}
+
+.questionnaire-container.analyzing {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+}
+
+.analyzing-content {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.analyzing-icon {
+  color: var(--primary);
+  margin-bottom: var(--spacing-lg);
+  animation: pulse 2s infinite;
+}
+
+.analyzing-content h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.analyzing-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.analyzing-content .spinner {
+  margin: 0 auto;
+}
+
+.questionnaire-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-lg);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease-out;
+}
+
+.questionnaire-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.greeting {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.question-counter {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.question-content h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.option-card {
+  background: var(--bg-tertiary);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+}
+
+.option-card:hover {
+  border-color: var(--primary);
+  background: white;
+  transform: translateX(4px);
+}
+
+.option-card.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.option-label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.check-mark {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.navigation-buttons .btn {
+  min-width: 120px;
+}
+
+.navigation-buttons .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .questionnaire-card {
+    padding: var(--spacing-lg);
+  }
+
+  .question-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .navigation-buttons .btn {
+    width: 100%;
+  }
+}
