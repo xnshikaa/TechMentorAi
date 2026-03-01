@@ -377,8 +377,8 @@ Built with ❤️ for the AI for Bharat initiative
 ## 📞 Contact
 
 For questions or feedback:
-- GitHub Issues: [Create an issue](https://github.com/yourusername/techmentor-ai/issues)
-- Email: your.email@example.com
+- GitHub Issues: https://github.com/xnshikaa/TechMentorAi/issues
+- Email: anshika.akg19@gmail.com
 
 ---
 
@@ -389,5 +389,3 @@ This project was built as part of a hackathon submission to demonstrate:
 - AI integration with guardrails
 - Cost-effective cloud solutions
 - Scalable learning platforms
-
-**Demo-ready in 5 days | Under $100 AWS credits | 100% Serverless**
