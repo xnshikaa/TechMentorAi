@@ -56,8 +56,8 @@ const SkillBooster = () => {
 
   const handleNext = () => {
     if (isLastQuestion) {
-      // Quiz completed
-      alert(`Quiz Complete! Score: ${score + (selectedAnswer === question.correct ? 1 : 0)}/${pythonQuestions.length}`);
+      // Quiz completed - score already includes all answered questions
+      alert(`Quiz Complete! Score: ${score}/${pythonQuestions.length}`);
       setCurrentQuestion(0);
       setSelectedAnswer(null);
       setShowExplanation(false);

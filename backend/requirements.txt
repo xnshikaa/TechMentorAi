@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.10.0
+pydantic-core==2.27.0
+python-dotenv==1.0.1
+boto3==1.35.0
+mangum==0.18.0
+python-multipart==0.0.9
+annotated-types==0.7.0
+typing-extensions==4.12.2

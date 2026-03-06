@@ -15,10 +15,20 @@ const LinkedInGenerator = () => {
     setIsGenerating(true);
     
     try {
-      // Call Bedrock API to generate LinkedIn post
+      // Fetch project details from backend
+      const projectResponse = await apiService.getProject(projectId);
+      const projectData = projectResponse.data.project;
+      
+      // Call Bedrock API with proper projectData format
       const response = await apiService.generateLinkedInPost({
-        projectId: projectId,
-        // Add project details here
+        projectData: {
+          id: projectData.id,
+          name: projectData.name,
+          description: projectData.description,
+          techStack: projectData.techStack,
+          level: projectData.level,
+          expectedOutcome: projectData.expectedOutcome
+        }
       });
       
       setPost(response.data.post);
